@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AL-FIRQA AN-NAJIYA — Исламские лекции</title>
+<meta name="description" content="Аудиоархив исламских знаний: акыда, таухид, фикх, хадисы, тафсир.">
+<meta property="og:title" content="AL-FIRQA AN-NAJIYA — Исламские лекции">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111820'/%3E%3Cpath d='M9 22V10h6M9 16h5' stroke='%23B8874A' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500&family=Amiri&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F6FA;--card:#fff;--tx:#111820;--tx2:#697481;--ac:#B8874A;--ln:rgba(17,24,32,.1);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#000;--card:#101010;--tx:#F5F5F5;--tx2:#969696;--ac:#E0821E;--ln:rgba(255,255,255,.12);color-scheme:dark}}
+:root[data-theme=dark]{--bg:#000;--card:#101010;--tx:#F5F5F5;--tx2:#969696;--ac:#E0821E;--ln:rgba(255,255,255,.12);color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{background:var(--bg);scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{font:16px/1.55 Inter,system-ui,sans-serif;color:var(--tx);background:var(--bg);padding:env(safe-area-inset-top,0px) 0 calc(env(safe-area-inset-bottom,0px) + 96px)}
+button,input,select{font:inherit;color:inherit}button{background:none;border:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--ln)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:600;letter-spacing:.04em;font-size:14px;white-space:nowrap}
+nav{display:none;gap:28px;font-size:14px;color:var(--tx2)}nav a:hover,nav a.on{color:var(--tx)}
+.ic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;color:var(--tx2);transition:.2s}.ic:hover{color:var(--tx);background:var(--ln)}
+.ic svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.tools{display:flex;gap:2px}
+#burger{display:grid}
+#menu{display:none;border-top:1px solid var(--ln);padding:8px 20px 14px}#menu.open{display:block}#menu a{display:block;padding:12px 0;color:var(--tx2)}
+@media(min-width:760px){nav{display:flex}#burger,#menu{display:none!important}}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:500;letter-spacing:-.02em;line-height:1.05}
+h1{font-size:clamp(44px,9vw,96px)}h2{font-size:clamp(26px,4vw,38px)}
+.hero{padding:clamp(48px,10vw,110px) 0 36px}.hero p{color:var(--tx2);margin-top:14px;font-size:18px}
+.count{color:var(--ac);font-weight:500;margin-top:6px}
+.ar{font-family:Amiri,serif;direction:rtl;font-size:22px;color:var(--tx2)}
+.notice{border:1px solid var(--ln);border-radius:12px;padding:12px 14px;color:var(--tx2);font-size:14px;margin:0 0 22px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px;align-items:center}
+.chip{padding:7px 14px;border-radius:99px;border:1px solid var(--ln);font-size:14px;color:var(--tx2);transition:.2s}.chip.on{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+select{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:7px 10px;font-size:14px}
+.list{border-top:1px solid var(--ln)}
+.row{display:grid;grid-template-columns:44px 1fr auto auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--ln)}
+.row .n{color:var(--tx2);font-size:13px;text-align:center}
+.row .t{font-weight:500}.row .s{font-size:13px;color:var(--tx2)}
+.row .d{font-size:13px;color:var(--tx2);font-variant-numeric:tabular-nums}
+.row .bp{height:2px;background:var(--ln);margin-top:7px;border-radius:2px;overflow:hidden}.row .bp i{display:block;height:100%;background:var(--ac)}
+.row.done .t{color:var(--tx2)}
+.play{width:36px;height:36px;border-radius:50%;border:1px solid var(--ln);display:grid;place-items:center;transition:.2s}.play:hover{background:var(--ac);color:#fff;border-color:var(--ac)}
+.play svg{width:14px;height:14px;fill:currentColor}
+.fav.on svg{fill:var(--ac);stroke:var(--ac)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:6px;min-height:170px;transition:border-color .2s}.card:hover{border-color:var(--ac)}
+.card .k{margin-top:auto;font-size:13px;color:var(--tx2)}
+.cover{aspect-ratio:1;width:100%;max-width:240px;border-radius:16px;background:var(--tx);color:var(--bg);display:flex;align-items:flex-end;padding:18px;font-family:Fraunces,serif;font-size:26px;line-height:1.05}
+.split{display:grid;gap:28px;margin:36px 0}@media(min-width:800px){.split{grid-template-columns:240px 1fr;gap:48px}}
+section{margin:44px 0}section>h2{margin-bottom:16px}
+.meta{color:var(--tx2);font-size:14px;margin:10px 0}
+.btn{display:inline-block;background:var(--tx);color:var(--bg);padding:11px 20px;border-radius:99px;font-weight:500;font-size:15px;margin-top:10px}
+.empty{color:var(--tx2);padding:28px 0}
+#search{position:fixed;inset:0;z-index:40;background:color-mix(in srgb,var(--bg) 96%,transparent);display:none;overflow:auto;padding:calc(env(safe-area-inset-top,0px) + 16px) 0 40px}#search.open{display:block}
+#q{width:100%;background:none;border:0;border-bottom:1px solid var(--ln);padding:14px 0;font-size:24px;outline:0}
+#player{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);border-top:1px solid var(--ln);padding:10px 0 calc(env(safe-area-inset-bottom,0px) + 10px);display:none}
+#player.on{display:block}
+#player .wrap{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center}
+.pt{min-width:0}.pt b{display:block;font-weight:500;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pt span{font-size:12px;color:var(--tx2)}
+.ctl{display:flex;align-items:center;gap:2px}
+.ctl .main{background:var(--tx);color:var(--bg);border-radius:50%}.ctl .main:hover{background:var(--ac);color:#fff}
+.seek{grid-column:1/-1;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--tx2);font-variant-numeric:tabular-nums}
+input[type=range]{flex:1;accent-color:var(--ac);height:24px}
+.opts{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;font-size:13px}
+.opts select{padding:4px 8px}
+#toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 120px);transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 16px;border-radius:99px;font-size:14px;opacity:0;pointer-events:none;transition:.25s;z-index:50;max-width:90vw;text-align:center}#toast.on{opacity:1}
+main{animation:in .25s ease}@keyframes in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+footer{color:var(--tx2);font-size:13px;padding:40px 0;border-top:1px solid var(--ln);margin-top:60px}
+</style></head><body>
+<header><div class="wrap"><a class="logo" href="#/">AL-FIRQA AN-NAJIYA</a>
+<nav><a href="#/" data-r="">Лекции</a><a href="#/categories" data-r="categories">Категории</a><a href="#/authors" data-r="authors">Авторы</a><a href="#/about" data-r="about">О проекте</a></nav>
+<div class="tools"><button class="ic" id="bS" aria-label="Поиск"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+<button class="ic" id="bT" aria-label="Сменить тему"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg></button>
+<a class="ic" href="#/library" aria-label="Моя библиотека"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.600-7 10-7 10z"/></svg></a>
+<button class="ic" id="burger" aria-label="Меню"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></div>
+<div id="menu"><a href="#/">Лекции</a><a href="#/categories">Категории</a><a href="#/authors">Авторы</a><a href="#/library">Моя библиотека</a><a href="#/about">О проекте</a></div></header>
+<main class="wrap" id="app"></main>
+<div id="search"><div class="wrap"><div style="display:flex;gap:8px;align-items:center"><input id="q" placeholder="Найти лекцию, шейха или тему…" autocomplete="off" aria-label="Поиск"><button class="ic" id="xS" aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><div id="sr" class="list" style="margin-top:12px"></div></div></div>
+<div id="player" role="region" aria-label="Плеер"><div class="wrap">
+<a class="pt" id="pt" href="#"><b></b><span></span></a>
+<div class="ctl"><button class="ic" id="pv" aria-label="Предыдущий урок"><svg viewBox="0 0 24 24"><path d="M6 5v14M19 5 9 12l10 7z"/></svg></button><button class="ic" id="b15" aria-label="Назад на 15 секунд"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.200M4 4v4h4"/></svg></button><button class="ic main" id="pp" aria-label="Воспроизвести"><svg viewBox="0 0 24 24" style="fill:currentColor"><path id="ppi" d="M8 5v14l11-7z"/></svg></button><button class="ic" id="f15" aria-label="Вперёд на 15 секунд"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-3-6.200M20 4v4h-4"/></svg></button><button class="ic" id="nx" aria-label="Следующий урок"><svg viewBox="0 0 24 24"><path d="M18 5v14M5 5l10 7L5 19z"/></svg></button></div>
+<div class="seek"><span id="tc">0:00</span><input type="range" id="sk" min="0" max="1000" value="0" aria-label="Позиция"><span id="td">0:00</span></div>
+<div class="opts"><label>Скорость <select id="sp"><option>0.75</option><option selected>1</option><option>1.25</option><option>1.5</option><option>2</option></select>×</label>
+<label>Таймер сна <select id="sl"><option value="0">выкл.</option><option value="15">15 мин</option><option value="30">30 мин</option><option value="60">60 мин</option><option value="end">до конца урока</option></select></label></div>
+</div></div>
+<div id="toast" role="status"></div>
+<script>
+// ===== Данные. Чтобы добавить лекцию: добавьте объект с audio: "https://…/file.mp3" =====
+const AUTHOR={id:"abu-yahya-krymsky",name:"Абу Яхья Крымский"};
+const CATS=[["aqida","Акыда"],["tawhid","Таухид"],["fiqh","Фикх"],["hadith","Хадисы"],["tafsir","Коран и тафсир"],["ethics","Нравственность"],["misc","Разное"]];
+const SERIES=[
+["tri-osnovy","Три основы","aqida",8,"Учебный цикл по основам религии."],
+["chetyre-pravila","Четыре правила","tawhid",5,"Учебный цикл о правилах таухида."],
+["shest-osnov","Шесть основ","aqida",6,"Учебный цикл по основам акыды."],
+["tri-osnovy-dokazatelstva","Три основы и доказательства","tawhid",7,"Разбор основ с доказательствами."],
+["etika-znaniya","Этика и требования знания","ethics",5,"Цикл об этике обучения и требованиях к знанию."]];
+const L=[];let seq=0;
+SERIES.forEach(([sid,sn,cat,n,ds],si)=>{for(let i=1;i<=n;i++){seq++;L.push({id:`${sid}-${i}`,title:`${sn}. Урок ${i}`,author:AUTHOR.id,cat,series:sid,no:i,dur:1500+((seq*379)%2100),audio:"",desc:ds,added:new Date(2026,9-si,Math.max(1,28-i)).toISOString().slice(0,10)})}});
+const $=s=>document.querySelector(s),app=$("#app"),CN=Object.fromEntries(CATS),SN=Object.fromEntries(SERIES.map(s=>[s[0],s]));
+const byId=id=>L.find(l=>l.id===id);
+// ===== Хранилище =====
+const ST={get(k,d){try{return JSON.parse(localStorage.getItem("af_"+k))??d}catch{return d}},set(k,v){try{localStorage.setItem("af_"+k,JSON.stringify(v))}catch{}}};
+let fav=ST.get("fav",[]),prog=ST.get("prog",{}),hist=ST.get("hist",[]),theme=ST.get("theme",null);
+if(theme)document.documentElement.dataset.theme=theme;
+const fmt=s=>{s=Math.floor(s||0);const h=Math.floor(s/3600),m=Math.floor(s%3600/60),c=s%60;return(h?h+":"+String(m).padStart(2,"0"):m)+":"+String(c).padStart(2,"0")};
+const mins=s=>Math.round(s/60)+" мин";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const toast=t=>{const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("on"),2600)};
+const heart='<svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7"><path d="M12 20s-7-4.400-7-10a4 4 0 0 1 7-2.600A4 4 0 0 1 19 10c0 5.600-7 10-7 10z"/></svg>';
+const pl='<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+// ===== Компоненты =====
+function row(l,{showSeries=true}={}){const p=prog[l.id],pc=p?Math.min(100,p.t/(p.d||l.dur)*100):0,done=p&&p.done;
+return `<div class="row ${done?"done":""}"><span class="n">${l.no}</span><a href="#/lecture/${l.id}"><div class="t">${esc(l.title)}</div><div class="s">${esc(AUTHOR.name)} · ${esc(CN[l.cat])}${showSeries?" · "+esc(SN[l.series][1]):""}${done?" · прослушано":""}</div>${pc?`<div class="bp"><i style="width:${pc}%"></i></div>`:""}</a>
+<span class="d">${fmt(l.dur)}</span><span style="display:flex;gap:4px"><button class="ic fav ${fav.includes(l.id)?"on":""}" data-fav="${l.id}" aria-label="В избранное">${heart}</button><button class="play" data-play="${l.id}" aria-label="Слушать">${pl}</button></span></div>`}
+const list=(a,o)=>a.length?`<div class="list">${a.map(l=>row(l,o)).join("")}</div>`:`<p class="empty">Ничего не найдено.</p>`;
+const card=(h,t,s,k)=>`<a class="card" href="${h}"><h2 style="font-size:24px">${esc(t)}</h2><span class="s" style="color:var(--tx2);font-size:14px">${esc(s)}</span><span class="k">${esc(k)}</span></a>`;
+const sum=a=>a.reduce((x,l)=>x+l.dur,0);
+// ===== Страницы =====
+let flt={cat:"",sort:"new"};
+const sorters={new:(a,b)=>b.added.localeCompare(a.added)||a.no-b.no,title:(a,b)=>a.title.localeCompare(b.title,"ru"),author:(a,b)=>AUTHOR.name.localeCompare(AUTHOR.name,"ru")||a.title.localeCompare(b.title,"ru"),dur:(a,b)=>a.dur-b.dur};
+const pages={
+home(){const a=L.filter(l=>!flt.cat||l.cat===flt.cat).sort(sorters[flt.sort]);
+return `<div class="hero"><h1>Лекции</h1><p>Аудиоархив исламских знаний.</p><div class="count">${L.length} лекций в каталоге</div></div>
+<div class="notice">Каталог пока демонстрационный: аудиофайлы не подключены. Добавьте ссылки на MP3 в поле <code>audio</code> в начале скрипта — плеер заработает без других изменений.</div>
+<div class="bar" id="fl">${[["","Все"],...CATS].map(([k,n])=>`<button class="chip ${flt.cat===k?"on":""}" data-cat="${k}">${n}</button>`).join("")}
+<select id="so" aria-label="Сортировка" style="margin-left:auto"><option value="new">Последние добавленные</option><option value="title">По названию</option><option value="author">По автору</option><option value="dur">По продолжительности</option></select></div>${list(a)}`},
+categories(){return `<section><h2>Категории</h2><div class="grid">${CATS.map(([k,n])=>{const a=L.filter(l=>l.cat===k);return card("#/cat/"+k,n,a.length?"":"Пока нет материалов",a.length+" лекций")}).join("")}</div></section>`},
+cat(id){const a=L.filter(l=>l.cat===id);return `<section><h2>${esc(CN[id]||"Категория")}</h2><p class="meta">${a.length} лекций</p>${list(a)}</section>`},
+authors(){return `<section><h2>Авторы</h2><div class="grid">${card("#/author/"+AUTHOR.id,AUTHOR.name,"",L.length+" лекций")}</div></section>`},
+author(id){if(id!==AUTHOR.id)return pages.nf();const ss=SERIES;return `<section><h2>${AUTHOR.name}</h2><p class="meta">Биография не добавлена: сюда войдут только подтверждённые сведения.</p></section>
+<section><h2 style="font-size:26px">Циклы</h2><div class="grid">${ss.map(s=>card("#/series/"+s[0],s[1],CN[s[2]],L.filter(l=>l.series===s[0]).length+" уроков")).join("")}</div></section><section><h2 style="font-size:26px">Все лекции</h2>${list(L)}</section>`},
+series(id){const s=SN[id];if(!s)return pages.nf();const a=L.filter(l=>l.series===id).sort((x,y)=>x.no-y.no),d=a.filter(l=>prog[l.id]?.done).length;ST.set("recent",[id,...ST.get("recent",[]).filter(x=>x!==id)].slice(0,6));
+return `<div class="split"><div class="cover">${esc(s[1])}</div><div><h1 style="font-size:clamp(34px,6vw,60px)">${esc(s[1])}</h1><p class="meta">${esc(AUTHOR.name)} · ${esc(CN[s[2]])}</p><p>${esc(s[4])}</p><p class="meta">${a.length} уроков · ${mins(sum(a))} · прослушано ${d} из ${a.length}</p><a class="btn" href="#/lecture/${(a.find(l=>!prog[l.id]?.done)||a[0]).id}">${d?"Продолжить":"Начать"}</a></div></div>${list(a,{showSeries:false})}`},
+lecture(id){const l=byId(id);if(!l)return pages.nf();const s=SN[l.series],p=prog[l.id];
+return `<div class="split"><div class="cover">${esc(s[1])}</div><div><p class="meta"><a href="#/series/${s[0]}">${esc(s[1])}</a> · урок ${l.no}</p><h1 style="font-size:clamp(32px,5.500vw,56px)">${esc(l.title)}</h1><p class="meta">${esc(AUTHOR.name)} · ${esc(CN[l.cat])} · ${fmt(l.dur)} · добавлено ${l.added.split("-").reverse().join(".")}</p><p>${esc(l.desc)}</p>${l.audio?"":`<p class="meta">Аудиофайл для этого урока не подключён.</p>`}
+<button class="btn" data-play="${l.id}">${p&&p.t>5?"Продолжить с "+fmt(p.t):"Слушать"}</button> <button class="chip fav ${fav.includes(l.id)?"on":""}" data-fav="${l.id}">В избранное</button></div></div>`},
+library(){const c=Object.entries(prog).filter(([i,p])=>p.t>5&&!p.done).sort((a,b)=>b[1].at-a[1].at).map(e=>byId(e[0])).filter(Boolean),f=fav.map(byId).filter(Boolean),h=hist.map(byId).filter(Boolean),r=ST.get("recent",[]).filter(x=>SN[x]);
+const dn=L.filter(l=>prog[l.id]?.done).length;
+return `<section><h1 style="font-size:clamp(34px,6vw,60px)">Моя библиотека</h1><p class="meta">Данные хранятся на этом устройстве. Синхронизация между устройствами не подключена.</p><p>Прогресс изучения: ${dn} из ${L.length} лекций прослушано.</p></section>
+<section><h2>Продолжить</h2>${c.length?list(c):'<p class="empty">Начатых лекций пока нет.</p>'}</section><section><h2>Избранное</h2>${f.length?list(f):'<p class="empty">Нажмите на сердце у лекции, чтобы сохранить её здесь.</p>'}</section>
+<section><h2>Последние циклы</h2>${r.length?`<div class="grid">${r.map(x=>card("#/series/"+x,SN[x][1],CN[SN[x][2]],"")).join("")}</div>`:'<p class="empty">Вы ещё не открывали циклы.</p>'}</section>
+<section><h2>История</h2>${h.length?list(h):'<p class="empty">История пуста.</p>'}${h.length?'<button class="chip" id="ch">Очистить историю</button>':""}</section>`},
+about(){return `<section><h2>О проекте</h2><p class="ar" lang="ar">الفرقة الناجية</p><p style="max-width:60ch;margin-top:14px">AL-FIRQA AN-NAJIYA — структурированный архив исламских аудиолекций: акыда, таухид, фикх, хадисы, тафсир и нравственность. Основной автор — ${AUTHOR.name}.</p></section>`},
+nf(){return `<section><h2>Страница не найдена</h2><p class="empty">Вернитесь к <a href="#/" style="color:var(--ac)">списку лекций</a>.</p></section>`}};
+function route(){const [,r="",a]=location.hash.slice(1).split("/");const k=r===""?"home":r;app.innerHTML=(pages[k]||pages.nf)(a)+`<footer>AL-FIRQA AN-NAJIYA — Исламские лекции</footer>`;
+const so=$("#so");if(so)so.value=flt.sort;document.querySelectorAll("nav a").forEach(x=>x.classList.toggle("on",x.dataset.r===r));$("#menu").classList.remove("open");scrollTo(0,0);
+document.title=k==="lecture"&&byId(a)?byId(a).title+" — AL-FIRQA AN-NAJIYA":"AL-FIRQA AN-NAJIYA — Исламские лекции"}
+addEventListener("hashchange",route);
+// ===== Плеер =====
+const au=new Audio();au.preload="metadata";let cur=null,sleepT=null,sleepEnd=false,lastSave=0;
+function load(l,start){cur=l;$("#player").classList.add("on");$("#pt b").textContent=l.title;$("#pt span").textContent=AUTHOR.name;$("#pt").href="#/lecture/"+l.id;
+hist=[l.id,...hist.filter(x=>x!==l.id)].slice(0,50);ST.set("hist",hist);
+if(!l.audio){au.removeAttribute("src");setPP(false);$("#td").textContent=fmt(l.dur);toast("Аудиофайл для этого урока не подключён");return false}
+au.src=l.audio;au.playbackRate=+$("#sp").value;au.onloadedmetadata=()=>{au.currentTime=start||0;$("#td").textContent=fmt(au.duration)};return true}
+function play(id){const l=byId(id);if(!l)return;if(cur&&cur.id===id&&au.src){au.paused?au.play():au.pause();return}
+const p=prog[id];if(load(l,p&&!p.done?p.t:0))au.play().catch(()=>toast("Не удалось воспроизвести файл"))}
+function setPP(p){$("#ppi").setAttribute("d",p?"M7 5h4v14H7zM13 5h4v14h-4z":"M8 5v14l11-7z");$("#pp").setAttribute("aria-label",p?"Пауза":"Воспроизвести")}
+function save(done){if(!cur||!au.src)return;prog[cur.id]={t:done?0:au.currentTime,d:au.duration||cur.dur,at:Date.now(),done:done||prog[cur.id]?.done};ST.set("prog",prog);ST.set("last",cur.id)}
+au.onplay=()=>setPP(true);au.onpause=()=>{setPP(false);save()};
+au.ontimeupdate=()=>{$("#tc").textContent=fmt(au.currentTime);$("#sk").value=au.duration?au.currentTime/au.duration*1000:0;if(Date.now()-lastSave>4000){lastSave=Date.now();save()}};
+au.onerror=()=>{if(au.src)toast("Ошибка загрузки аудио")};
+au.onended=()=>{save(true);if(sleepEnd){sleepEnd=false;return}step(1)};
+function step(d){if(!cur)return;const a=L.filter(l=>l.series===cur.series).sort((x,y)=>x.no-y.no),n=a[a.findIndex(l=>l.id===cur.id)+d];if(!n){toast(d>0?"Это последний урок цикла":"Это первый урок цикла");return}const p=prog[n.id];if(load(n,p&&!p.done?p.t:0))au.play().catch(()=>{})}
+$("#pp").onclick=()=>{if(!cur)return;if(!au.src)return toast("Аудиофайл для этого урока не подключён");au.paused?au.play():au.pause()};
+$("#pv").onclick=()=>step(-1);$("#nx").onclick=()=>step(1);
+$("#b15").onclick=()=>{au.currentTime=Math.max(0,au.currentTime-15)};$("#f15").onclick=()=>{au.currentTime=Math.min(au.duration||0,au.currentTime+15)};
+$("#sk").oninput=e=>{if(au.duration)au.currentTime=e.target.value/1000*au.duration};
+$("#sp").onchange=e=>{au.playbackRate=+e.target.value;ST.set("speed",e.target.value)};
+$("#sl").onchange=e=>{clearTimeout(sleepT);sleepEnd=false;const v=e.target.value;if(v==="end"){sleepEnd=true;toast("Остановим в конце урока")}else if(+v){sleepT=setTimeout(()=>{au.pause();$("#sl").value="0";toast("Таймер сна: воспроизведение остановлено")},v*60000);toast("Таймер сна: "+v+" мин")}};
+addEventListener("pagehide",()=>save());
+// ===== События =====
+document.addEventListener("click",e=>{const t=e.target.closest("[data-play],[data-fav],[data-cat],#ch");if(!t)return;
+if(t.dataset.play)play(t.dataset.play);
+else if(t.dataset.fav){const i=t.dataset.fav;fav=fav.includes(i)?fav.filter(x=>x!==i):[i,...fav];ST.set("fav",fav);document.querySelectorAll(`[data-fav="${i}"]`).forEach(b=>b.classList.toggle("on",fav.includes(i)));if(location.hash.startsWith("#/library"))route()}
+else if(t.dataset.cat!==undefined){flt.cat=t.dataset.cat;route()}
+else if(t.id==="ch"){hist=[];ST.set("hist",[]);route()}});
+document.addEventListener("change",e=>{if(e.target.id==="so"){flt.sort=e.target.value;route()}});
+$("#bT").onclick=()=>{const d=document.documentElement,dark=d.dataset.theme?d.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;theme=dark?"light":"dark";d.dataset.theme=theme;ST.set("theme",theme)};
+$("#burger").onclick=()=>$("#menu").classList.toggle("open");
+const openS=()=>{$("#search").classList.add("open");$("#q").focus();doS()},closeS=()=>$("#search").classList.remove("open");
+$("#bS").onclick=openS;$("#xS").onclick=closeS;addEventListener("keydown",e=>{if(e.key==="Escape")closeS();if(e.key==="/"&&!/INPUT|SELECT/.test(document.activeElement.tagName)){e.preventDefault();openS()}});
+function doS(){const q=$("#q").value.trim().toLowerCase(),r=q?L.filter(l=>[l.title,AUTHOR.name,CN[l.cat],SN[l.series][1],l.desc].join(" ").toLowerCase().includes(q)):L.slice(0,8);$("#sr").innerHTML=r.length?r.map(l=>row(l)).join(""):`<p class="empty">По запросу «${esc(q)}» ничего нет. Попробуйте название цикла или категории.</p>`}
+$("#q").oninput=doS;$("#sr").onclick=e=>{if(e.target.closest("a"))closeS()};
+// ===== Старт =====
+$("#sp").value=ST.get("speed","1");
+const last=byId(ST.get("last",""));if(last){cur=last;$("#player").classList.add("on");$("#pt b").textContent=last.title;$("#pt span").textContent=AUTHOR.name;$("#pt").href="#/lecture/"+last.id;$("#td").textContent=fmt(last.dur);$("#tc").textContent=fmt(prog[last.id]?.t||0)}
+if("serviceWorker" in navigator&&false){}
+route();
+</script></body></html>

@@ -93,14 +93,34 @@ footer{color:var(--tx2);font-size:13px;padding:40px 0;border-top:1px solid var(-
 // ===== Данные. Чтобы добавить лекцию: добавьте объект с audio: "https://…/file.mp3" =====
 const AUTHOR={id:"abu-yahya-krymsky",name:"Абу Яхья Крымский"};
 const CATS=[["aqida","Акыда"],["tawhid","Таухид"],["fiqh","Фикх"],["hadith","Хадисы"],["tafsir","Коран и тафсир"],["ethics","Нравственность"],["misc","Разное"]];
+const AUDIO={
+1:{src:"/manus-storage/urok-1_a699b9f6.mp3",duration:2134},
+2:{src:"/manus-storage/urok-2_f362868a.mp3",duration:3036},
+3:{src:"/manus-storage/urok-3_3aa8f8c3.mp3",duration:3565},
+4:{src:"/manus-storage/urok-4_12bf4a93.mp3",duration:2578},
+5:{src:"/manus-storage/urok-5_cf47fe73.mp3",duration:1842},
+6:{src:"/manus-storage/urok-6_ef42bece.mp3",duration:2541},
+7:{src:"/manus-storage/urok-7_e8daaa89.mp3",duration:2848},
+8:{src:"/manus-storage/urok-8_cb9dfc19.mp3",duration:2117},
+9:{src:"/manus-storage/urok-9_3d256424.mp3",duration:2531},
+10:{src:"/manus-storage/urok-10_92645100.mp3",duration:2658},
+11:{src:"/manus-storage/urok-11_035d1256.mp3",duration:2986},
+12:{src:"/manus-storage/urok-12_6a01b81c.mp3",duration:3089},
+13:{src:"/manus-storage/urok-13_ba3c3759.mp3",duration:3445},
+14:{src:"/manus-storage/urok-14_bdf6d2ac.mp3",duration:2808},
+15:{src:"/manus-storage/urok-15_98cc78a8.mp3",duration:2116},
+16:{src:"/manus-storage/urok-16_7dbe3dcf.mp3",duration:3317},
+17:{src:"/manus-storage/urok-17_047028f9.mp3",duration:1985},
+18:{src:"/manus-storage/urok-18_37748297.mp3",duration:3065}
+};
 const SERIES=[
-["tri-osnovy","Три основы","aqida",8,"Учебный цикл по основам религии."],
+["tri-osnovy","Три основы","aqida",18,"Учебный цикл по основам религии."],
 ["chetyre-pravila","Четыре правила","tawhid",5,"Учебный цикл о правилах таухида."],
 ["shest-osnov","Шесть основ","aqida",6,"Учебный цикл по основам акыды."],
 ["tri-osnovy-dokazatelstva","Три основы и доказательства","tawhid",7,"Разбор основ с доказательствами."],
 ["etika-znaniya","Этика и требования знания","ethics",5,"Цикл об этике обучения и требованиях к знанию."]];
 const L=[];let seq=0;
-SERIES.forEach(([sid,sn,cat,n,ds],si)=>{for(let i=1;i<=n;i++){seq++;L.push({id:`${sid}-${i}`,title:`${sn}. Урок ${i}`,author:AUTHOR.id,cat,series:sid,no:i,dur:1500+((seq*379)%2100),audio:"",desc:ds,added:new Date(2026,9-si,Math.max(1,28-i)).toISOString().slice(0,10)})}});
+SERIES.forEach(([sid,sn,cat,n,ds],si)=>{for(let i=1;i<=n;i++){seq++;const audio=sid==="tri-osnovy"?AUDIO[i]:null;L.push({id:`${sid}-${i}`,title:`${sn}. Урок ${i}`,author:AUTHOR.id,cat,series:sid,no:i,dur:audio?.duration||1500+((seq*379)%2100),audio:audio?.src||"",desc:ds,added:new Date(2026,9-si,Math.max(1,28-i)).toISOString().slice(0,10)})}});
 const $=s=>document.querySelector(s),app=$("#app"),CN=Object.fromEntries(CATS),SN=Object.fromEntries(SERIES.map(s=>[s[0],s]));
 const byId=id=>L.find(l=>l.id===id);
 // ===== Хранилище =====
@@ -126,7 +146,7 @@ const sorters={new:(a,b)=>b.added.localeCompare(a.added)||a.no-b.no,title:(a,b)=
 const pages={
 home(){const a=L.filter(l=>!flt.cat||l.cat===flt.cat).sort(sorters[flt.sort]);
 return `<div class="hero"><h1>Лекции</h1><p>Аудиоархив исламских знаний.</p><div class="count">${L.length} лекций в каталоге</div></div>
-<div class="notice">Каталог пока демонстрационный: аудиофайлы не подключены. Добавьте ссылки на MP3 в поле <code>audio</code> в начале скрипта — плеер заработает без других изменений.</div>
+<div class="notice">В цикле «Три основы» доступны аудиозаписи уроков 1–18. Другие циклы каталога пока демонстрационные.</div>
 <div class="bar" id="fl">${[["","Все"],...CATS].map(([k,n])=>`<button class="chip ${flt.cat===k?"on":""}" data-cat="${k}">${n}</button>`).join("")}
 <select id="so" aria-label="Сортировка" style="margin-left:auto"><option value="new">Последние добавленные</option><option value="title">По названию</option><option value="author">По автору</option><option value="dur">По продолжительности</option></select></div>${list(a)}`},
 categories(){return `<section><h2>Категории</h2><div class="grid">${CATS.map(([k,n])=>{const a=L.filter(l=>l.cat===k);return card("#/cat/"+k,n,a.length?"":"Пока нет материалов",a.length+" лекций")}).join("")}</div></section>`},
